@@ -4,15 +4,31 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const GH_ORGANIZATION_NAME: string = "CollinRoboticsClub";
 const GH_REPOSITORY_NAME: string = "documentation";
+const GH_URL: string = `https://github.com/${GH_ORGANIZATION_NAME}/${GH_REPOSITORY_NAME}`
 
 const TITLE: string = "Collin College Robotics Club Documentation";
+const TAGLINE: string = ""
 
 const GH_PAGES_URL: string = `https://${GH_ORGANIZATION_NAME.toLowerCase()}.github.io`;
 
+const paths = {
+  ts: {
+    SIDEBAR: './sidebars.ts',
+  },
+  images: {
+    FAVICON: 'img/favicon.ico',
+
+    // FIXME:
+    SOCIAL_CARD: 'img/docusaurus-social-card.jpg',
+    SITE_LOGO: 'img/logo.svg',
+  },
+  CUSTOM_CSS: './src/css/custom.css',
+}
+
 const config: Config = {
   title: TITLE,
-  tagline: 'Dinosaurs are cool',
-  favicon: 'img/favicon.ico',
+  tagline: TAGLINE,
+  favicon: paths.images.FAVICON,
 
   // Set the production url of your site here
   url: GH_PAGES_URL,
@@ -41,42 +57,24 @@ const config: Config = {
       'classic',
       {
         docs: {
-          sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
+          sidebarPath: paths.ts.SIDEBAR,
+          // TESTME: Remove this to remove the "edit this page" links.
+          editUrl: (GH_URL + '/tree/main/packages/create-docusaurus/templates/shared/'),
         },
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: paths.CUSTOM_CSS,
         },
       } satisfies Preset.Options,
     ],
   ],
 
   themeConfig: {
-    // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: paths.images.SOCIAL_CARD,
     navbar: {
-      title: 'My Site',
+      title: TITLE,
       logo: {
         alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        src: paths.images.SITE_LOGO,
       },
       items: [
         {
@@ -85,9 +83,8 @@ const config: Config = {
           position: 'left',
           label: 'Tutorial',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: GH_URL,
           label: 'GitHub',
           position: 'right',
         },
@@ -106,6 +103,7 @@ const config: Config = {
           ],
         },
         {
+          // FIXME:
           title: 'Community',
           items: [
             {
@@ -126,16 +124,13 @@ const config: Config = {
           title: 'More',
           items: [
             {
-              label: 'Blog',
-              to: '/blog',
-            },
-            {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: GH_URL,
             },
           ],
         },
       ],
+      // FIXME:
       copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
     },
     prism: {
