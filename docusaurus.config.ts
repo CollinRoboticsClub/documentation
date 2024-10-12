@@ -2,21 +2,28 @@ import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
+const GH_ORGANIZATION_NAME: string = "CollinRoboticsClub";
+const GH_REPOSITORY_NAME: string = "documentation";
+
+const TITLE: string = "Collin College Robotics Club Documentation";
+
+const GH_PAGES_URL: string = `https://${GH_ORGANIZATION_NAME.toLowerCase()}.github.io`;
+
 const config: Config = {
-  title: 'My Site',
+  title: TITLE,
   tagline: 'Dinosaurs are cool',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: GH_PAGES_URL,
 
   // Set the /<baseUrl>/ pathname under which your site is served
-  baseUrl: '/documentation/',
+  baseUrl: '/' + GH_REPOSITORY_NAME + '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: GH_ORGANIZATION_NAME,
+  projectName: GH_REPOSITORY_NAME,
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
