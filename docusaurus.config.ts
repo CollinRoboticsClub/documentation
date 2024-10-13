@@ -141,8 +141,6 @@ const config: Config = {
                     ],
                 },
             ],
-            // FIXME:
-            // copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
         },
         prism: {
             theme: prismThemes.github,
