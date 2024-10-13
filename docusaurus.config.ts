@@ -17,7 +17,8 @@ const TAGLINE: string = ""
 const SITE_LOGO_ALT_TEXT = 'My Site Logo';
 
 // URLs that may need to be changed at a later date
-const DISCORD_SERVER_LINK = 'https://discord.gg/SKMkTTSBrB';
+const DISCORD_SERVER_LINK: string = 'https://discord.gg/SKMkTTSBrB';
+const COUGAR_CONNECT_LINK: string = "https://collin.campuslabs.com/engage/organization/collin-robotics-club";
 
 // File paths
 const paths = {
@@ -107,23 +108,16 @@ const config: Config = {
                 },
             ],
         },
-        // FIXME:
         footer: {
             style: 'dark',
             links: [
                 {
-                    title: 'Docs',
-                    items: [
-                        {
-                            label: 'Tutorial',
-                            to: '/docs/intro',
-                        },
-                    ],
-                },
-                {
                     title: 'Community',
                     items: [
-                        // FIXME: add CougarConnect link, and any other social media (do we have instagram?)
+                        {
+                            label: 'CougarConnect',
+                            href: COUGAR_CONNECT_LINK,
+                        },
                         {
                             label: 'Discord',
                             href: DISCORD_SERVER_LINK,
