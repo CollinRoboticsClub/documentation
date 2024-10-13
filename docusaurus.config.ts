@@ -27,8 +27,7 @@ const paths = {
     images: {
         FAVICON: 'img/favicon.ico',
 
-        // FIXME:
-        SOCIAL_CARD: 'img/docusaurus-social-card.jpg',
+        SOCIAL_CARD: 'img/social-card.png',
         SITE_LOGO: 'img/logo.svg',
     },
     CUSTOM_CSS: './src/css/custom.css',
