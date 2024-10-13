@@ -112,6 +112,16 @@ const config: Config = {
             style: 'dark',
             links: [
                 {
+                    // FIXME:
+                    title: 'Docs',
+                    items: [
+                        {
+                            label: 'Onboarding',
+                            to: '/onboarding/Overview',
+                        },
+                    ],
+                },
+                {
                     title: 'Community',
                     items: [
                         {
