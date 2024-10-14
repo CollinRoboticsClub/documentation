@@ -6,6 +6,7 @@ import Heading from '@theme/Heading';
 
 import styles from './index.module.css';
 import Logo from "@site/src/components/Logo";
+import React from "react";
 
 function HomepageHeader() {
     const {siteConfig} = useDocusaurusContext();
@@ -29,7 +30,7 @@ function HomepageHeader() {
     );
 }
 
-export default function Home(): JSX.Element {
+export default function Home(): React.JSX.Element {
     const {siteConfig} = useDocusaurusContext();
     return (
         <Layout
