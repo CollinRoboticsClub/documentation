@@ -8,7 +8,8 @@ const GH_ORGANIZATION_NAME: string = "CollinRoboticsClub";
 const GH_REPOSITORY_NAME: string = "documentation";
 
 // GitHub constants derived from provided constants (i.e: you probably don't need to touch these)
-const GH_URL: string = `https://github.com/${GH_ORGANIZATION_NAME}/${GH_REPOSITORY_NAME}`
+const GH_DOCS_REPO_URL: string = `https://github.com/${GH_ORGANIZATION_NAME}/${GH_REPOSITORY_NAME}`
+const GH_ORG_URL: string = `https://github.com/${GH_ORGANIZATION_NAME}`
 const GH_PAGES_URL: string = `https://${GH_ORGANIZATION_NAME.toLowerCase()}.github.io`;
 
 // Various user-facing strings
@@ -44,7 +45,12 @@ for (const project of LIST_OF_PROJECT_DOCS) {
     })
 }
 
+const START_PATH: string = '/start-here/Intro' as const;
 const config: Config = {
+    customFields: {
+        startPath: START_PATH
+    },
+
     title: TITLE,
     tagline: TAGLINE,
     favicon: paths.images.FAVICON,
@@ -82,7 +88,7 @@ const config: Config = {
                     sidebarPath: paths.ts.SIDEBAR,
 
                     // Remove this to remove the "edit this page" links.
-                    editUrl: (GH_URL + '/tree/main/packages/create-docusaurus/templates/shared/')
+                    editUrl: (GH_DOCS_REPO_URL + '/tree/main/packages/create-docusaurus/templates/shared/')
                 },
                 theme: {
                     customCss: paths.CUSTOM_CSS,
@@ -93,6 +99,9 @@ const config: Config = {
 
     themeConfig: {
         image: paths.images.SOCIAL_CARD,
+        colorMode: {
+            respectPrefersColorScheme: true
+        },
         navbar: {
             title: TITLE,
             logo: {
@@ -102,7 +111,7 @@ const config: Config = {
             items: [
                 ...navbarItems,
                 {
-                    href: GH_URL,
+                    href: GH_ORG_URL,
                     label: 'GitHub',
                     position: 'right',
                 },
@@ -112,12 +121,11 @@ const config: Config = {
             style: 'dark',
             links: [
                 {
-                    // FIXME:
                     title: 'Docs',
                     items: [
                         {
-                            label: 'Onboarding',
-                            to: '/onboarding/Overview',
+                            label: 'Start Here',
+                            to: START_PATH,
                         },
                     ],
                 },
@@ -139,7 +147,7 @@ const config: Config = {
                     items: [
                         {
                             label: 'GitHub',
-                            href: GH_URL,
+                            href: GH_ORG_URL,
                         },
                     ],
                 },

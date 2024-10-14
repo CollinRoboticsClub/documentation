@@ -5,7 +5,7 @@ type ProjectDocs = {
 };
 
 const LIST_OF_PROJECT_DOCS: ProjectDocs[] = [
-    {label: "Team Info", dirName: "onboarding", sidebarID: "onboardingSidebar"},
+    {label: "Start Here", dirName: "start-here", sidebarID: "startHereSidebar"},
     {label: "EnMo", dirName: "enmo", sidebarID: "enmoSidebar"},
     {label: "STORM", dirName: "storm", sidebarID: "stormSidebar"},
 ] as const;
