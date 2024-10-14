@@ -12,6 +12,7 @@ function HomepageHeader() {
     return (
         <header className={clsx('hero hero--primary', styles.heroBanner)}>
             <div className="container">
+                <img src={require('@site/static/img/logo.png').default} alt="CRC Logo" style={{width: 128}}/>
                 <Heading as="h1" className="hero__title">
                     {siteConfig.title}
                 </Heading>

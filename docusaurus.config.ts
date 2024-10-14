@@ -28,8 +28,7 @@ const paths = {
     },
     images: {
         FAVICON: 'img/favicon.ico',
-
-        SOCIAL_CARD: 'img/social-card.png',
+        SOCIAL_CARD: 'img/logo.png',
         SITE_LOGO: 'img/logo.svg',
     },
     CUSTOM_CSS: './src/css/custom.css',
