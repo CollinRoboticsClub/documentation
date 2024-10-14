@@ -5,13 +5,14 @@ import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
 
 import styles from './index.module.css';
+import Logo from "@site/src/components/Logo";
 
 function HomepageHeader() {
     const {siteConfig} = useDocusaurusContext();
     return (
         <header className={clsx('hero hero--primary', styles.heroBanner)}>
             <div className="container">
-                <img src={require('@site/static/img/logo.png').default} alt="CRC Logo" style={{width: 128}}/>
+                <Logo/>
                 <Heading as="h1" className="hero__title">
                     {siteConfig.title}
                 </Heading>
