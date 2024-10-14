@@ -12,9 +12,9 @@ const GH_URL: string = `https://github.com/${GH_ORGANIZATION_NAME}/${GH_REPOSITO
 const GH_PAGES_URL: string = `https://${GH_ORGANIZATION_NAME.toLowerCase()}.github.io`;
 
 // Various user-facing strings
-const TITLE: string = "Collin College Robotics Club Documentation";
+const TITLE: string = "CRC Documentation";
 const TAGLINE: string = ""
-const SITE_LOGO_ALT_TEXT = 'My Site Logo';
+const SITE_LOGO_ALT_TEXT = 'CRC Logo';
 
 // URLs that may need to be changed at a later date
 const DISCORD_SERVER_LINK: string = 'https://discord.gg/SKMkTTSBrB';
@@ -32,7 +32,7 @@ const paths = {
         SITE_LOGO: 'img/logo.svg',
     },
     CUSTOM_CSS: './src/css/custom.css',
-};
+} as const;
 
 const navbarItems = [];
 for (const project of LIST_OF_PROJECT_DOCS) {
@@ -81,7 +81,7 @@ const config: Config = {
 
                     sidebarPath: paths.ts.SIDEBAR,
 
-                    // TESTME: Remove this to remove the "edit this page" links.
+                    // Remove this to remove the "edit this page" links.
                     editUrl: (GH_URL + '/tree/main/packages/create-docusaurus/templates/shared/')
                 },
                 theme: {
