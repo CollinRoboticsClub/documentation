@@ -4,6 +4,8 @@ This website is used to host the documentation for our projects as a way to easi
 between all members of our team, as well as to show new members what types of projects we've done in the past, and/or to
 catch them up on what we're currently working on! If you want to join us, feel free to head to CougarConnect.
 
+If you want to make changes to the documentation, please refer to [this file](CONTRIBUTING.md)
+
 ## Information For Developers
 
 This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
