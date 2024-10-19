@@ -1,5 +1,3 @@
 # Overview
 
-:::warning
-TODO
-:::
+Robot (with arm).
