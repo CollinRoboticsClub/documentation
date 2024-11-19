@@ -157,6 +157,23 @@ const config: Config = {
             darkTheme: prismThemes.dracula,
         },
     } satisfies Preset.ThemeConfig,
+
+	// Enable experimental performance features.
+	// Technically "experimental", but Docusaurus uses it in prod and says it's robust.
+	future: {
+		experimental_faster: {
+			swcJsLoader: true,
+			swcJsMinimizer: true,
+			swcHtmlMinimizer: true,
+			lightningCssMinimizer: true,
+
+			// Was breaking hot-reload for me when running via `pnpm start`
+			rspackBundler: false,
+
+			mdxCrossCompilerCache: true,
+		},
+	},
+
 };
 
 export default config;
