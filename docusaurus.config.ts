@@ -6,6 +6,7 @@ import LIST_OF_PROJECT_DOCS from './constants';
 // GitHub constants
 const GH_ORGANIZATION_NAME: string = "CollinRoboticsClub";
 const GH_REPOSITORY_NAME: string = "documentation";
+const GH_EDIT_BRANCH: string = "main";
 
 // GitHub constants derived from provided constants (i.e: you probably don't need to touch these)
 const GH_DOCS_REPO_URL: string = `https://github.com/${GH_ORGANIZATION_NAME}/${GH_REPOSITORY_NAME}`
@@ -87,7 +88,7 @@ const config: Config = {
                     sidebarPath: paths.ts.SIDEBAR,
 
                     // Remove this to remove the "edit this page" links.
-                    editUrl: (GH_DOCS_REPO_URL + '/tree/main/packages/create-docusaurus/templates/shared/')
+                    editUrl: (GH_DOCS_REPO_URL + '/edit/' + GH_EDIT_BRANCH)
                 },
                 theme: {
                     customCss: paths.CUSTOM_CSS,
