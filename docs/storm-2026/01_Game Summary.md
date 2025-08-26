@@ -2,16 +2,17 @@
 - [FIELD CAD](https://cad.onshape.com/documents/27daab121bdff62b53c28867/w/06f03db4b1ca7f48c9b9e6ac/e/0c23027072ad3689ce5a8325)
 
 <!-- https://docusaurus.io/docs/markdown-features/assets#static-assets -->
-![3D Field View](/img/STORM 2025 Pasted image 20250826040142.png)
+<!-- Nvm i'll try it "normally": https://docusaurus.io/docs/markdown-features/assets#images -->
+![3D Field View](./img/STORM%202025%203D%20Field%20View.png)
 
-![Ways to Score](/img/STORM 2025 Pasted image 20250826044153.png)
+![Ways to Score](./img/STORM%202025%20Ways%20To%20Score.png)
 
 ## Josh's notes on the STORM autonomous world
 - First 30 seconds is auto
 - Start your autonomous sequence from a button on GUI, or single keypress
 
 ## Some basic new safety rules:
-![New tech safety rules](/img/STORM 2025 Pasted image 20250826041409.png)
+![New tech safety rules](./img/STORM%202025%20New%20safety%20rules.png)
 
 ## Scoring:
 - Leaving the team zone during autonomous earns 3pts.
