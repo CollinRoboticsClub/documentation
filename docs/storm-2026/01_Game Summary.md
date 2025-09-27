@@ -1,4 +1,4 @@
-- [V1 RULES](https://cdn.soonerrobotics.org/storm/rules/STORM_Rules_2026)
+- [V1 RULES](https://cdn.soonerrobotics.org/storm/rules/STORM_Rules_2026.pdf)
 - [FIELD CAD](https://cad.onshape.com/documents/27daab121bdff62b53c28867/w/06f03db4b1ca7f48c9b9e6ac/e/0c23027072ad3689ce5a8325)
 
 <!-- https://docusaurus.io/docs/markdown-features/assets#static-assets -->
@@ -36,4 +36,5 @@
 - Avoid the Floodwater
 	- Hang at end for 20pts.
 	- \>12" off the Field gets additional 20pts.
+
 
