@@ -1,3 +1,4 @@
+# Programming Notes
 # Localization:
 I've separated these into levels. We must do at least lvl 1, and ideally lvl 2.
 
